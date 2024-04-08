@@ -31,22 +31,26 @@ function moveFile(sourceFile, destination) {
 }
 
 for (const extension in extensions) {
-  const files = fs
-    .readdirSync(source)
-    .filter((file) => file.endsWith(`.${extension}`));
-  let destFolder;
+  try {
+    const files = fs
+      .readdirSync(source)
+      .filter((file) => file.endsWith(`.${extension}`));
+    let destFolder;
 
-  files.forEach((file) => {
-    if (["rar", "docx"].includes(extension)) {
-      moveFile(path.join(source, file), dest1);
-      destFolder = dest1;
-    } else if (["jpg", "png", "ico"].includes(extension)) {
-      moveFile(path.join(source, file), dest2);
-      destFolder = dest2;
-    } else if (["mp4", "avi", "mk4"].includes(extension)) {
-      moveFile(path.join(source, file), dest3);
-      destFolder = dest3;
-    }
-    console.log(`File: ${file} moved to: ${destFolder}`);
-  });
+    files.forEach((file) => {
+      if (["rar", "docx"].includes(extension)) {
+        moveFile(path.join(source, file), dest1);
+        destFolder = dest1;
+      } else if (["jpg", "png", "ico"].includes(extension)) {
+        moveFile(path.join(source, file), dest2);
+        destFolder = dest2;
+      } else if (["mp4", "avi", "mk4"].includes(extension)) {
+        moveFile(path.join(source, file), dest3);
+        destFolder = dest3;
+      }
+      console.log(`File: ${file} moved to: ${destFolder}`);
+    });
+  } catch (error) {
+    console.error(`Error moving files with ${extension}: ${error}`);
+  }
 }
