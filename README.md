@@ -1,9 +1,4 @@
-<div align="center" id="top"> 
-
-  &#xa0;
-
-  <!-- <a href="https://fileorganizer.netlify.app">Demo</a> -->
-</div>
+&#xa0;
 
 <h1 align="center">File Organizer</h1>
 
