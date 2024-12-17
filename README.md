@@ -40,7 +40,7 @@
 
 ## :dart: About
 
-A simple script that organizes files based on their extensions. It scans a specified source directory for files and moves them to destination folders according to their file types. The script categorizes files into groups such as documents, images, and videos, and then moves them to their respective folders. Additionally, it provides error handling to manage any issues that may arise during the organization process.
+A script that organizes files based on their extensions. It scans a specified source directory for files and moves them to destination folders according to their file types. The script categorizes files into groups such as documents, images, and videos, and then moves them to their respective folders. Additionally, it provides error handling to manage any issues that may arise during the organization process.
 
 ## :sparkles: Features
 
