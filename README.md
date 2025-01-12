@@ -75,7 +75,7 @@ private const string Documents = @"C:\YOUR-PATH\Documents";
 private const string Pictures = @"C:\YOUR-PATH\Pictures";
 private const string Videos = @"C:\YOUR-PATH\Videos";
 
-# Once you've updated the paths, run the project
+# Run the project
 $ dotnet run
 ```
 
