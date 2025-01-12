@@ -53,6 +53,7 @@ A script that organizes files based on their extensions. It scans a specified so
 
 The following tools were used in this project:
 
+- .NET 8.0
 - C#
 
 ## :white_check_mark: Requirements
@@ -69,11 +70,6 @@ $ git clone https://github.com/wlsonsouto/file-organizer
 $ cd file-organizer/FileOrganizer
 
 # Open Program.cs and update the paths below to match your local directories:
-# - Source: The folder where your files are located (e.g., Downloads)
-# - Documents: The folder where you want to move document files (e.g., Documents)
-# - Pictures: The folder where you want to move image files (e.g., Pictures)
-# - Videos: The folder where you want to move video files (e.g., Videos)
-
 private const string Source = @"C:\YOUR-PATH\Downloads";
 private const string Documents = @"C:\YOUR-PATH\Documents";
 private const string Pictures = @"C:\YOUR-PATH\Pictures";
