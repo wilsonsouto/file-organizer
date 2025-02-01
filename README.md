@@ -44,10 +44,10 @@ This script organizes files by extension, saving time and reducing manual effort
 
 ## :sparkles: Features
 
-:heavy_check_mark: **Reading files**: The code reads files from specified `source` directory;\
-:heavy_check_mark: **Filtering by Extension**: For each extension in the `extensions` object, it filters files in the `source` directory based on the extension;\
-:heavy_check_mark: **Moving Files**: It moves files to different destination folders (`documents`, `pictures`, `videos`) based on their extension;\
-:heavy_check_mark: **Error handling**: The `try...catch` block capture errors that may occur during the file moving process, providing a more robust error handling mechanism;
+:heavy_check_mark: **Reading Files**: The code reads files from the specified source directory;\
+:heavy_check_mark: **Filtering by Extension**: Filters files in the source directory based on extensions in the extensions object;\
+:heavy_check_mark: **Moving Files**: Moves files to corresponding folders (documents, pictures, videos) based on their extension;\
+:heavy_check_mark: **Error Handling**: Uses try...catch to capture errors, ensuring a more reliable process;
 
 ## :rocket: Technologies
 
