@@ -40,7 +40,7 @@
 
 ## :dart: About
 
-This script automates the process of organizing files based on their extensions, saving time and reducing manual effort. It scans a specified source directory, categorizes files into groups such as documents, images, and videos, and moves them into corresponding folders. The script also includes error handling to ensure a smooth and efficient file organization process.
+This script organizes files by extension, saving time and reducing manual effort. It scans a source directory, categorizes files into groups like documents, images, and videos, and moves them into corresponding folders. With built-in error handling, it ensures a smooth and efficient process.
 
 ## :sparkles: Features
 
