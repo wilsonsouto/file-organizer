@@ -44,10 +44,10 @@ This script organizes files by extension, saving time and reducing manual effort
 
 ## :sparkles: Features
 
-:heavy_check_mark: **Reading Files**: The code reads files from the specified source directory;\
-:heavy_check_mark: **Filtering by Extension**: Filters files in the source directory based on extensions in the extensions object;\
-:heavy_check_mark: **Moving Files**: Moves files to corresponding folders (documents, pictures, videos) based on their extension;\
-:heavy_check_mark: **Error Handling**: Uses try...catch to capture errors, ensuring a more reliable process;
+:heavy_check_mark: **Reading Files**: The code reads files from the specified source directory.\
+:heavy_check_mark: **Filtering by Extension**: Filters files in the source directory based on extensions in the extensions object.\
+:heavy_check_mark: **Moving Files**: Moves files to corresponding folders (documents, pictures, videos) based on their extension.\
+:heavy_check_mark: **Error Handling**: Uses try...catch to capture errors, ensuring a more reliable process.
 
 ## :rocket: Technologies
 
@@ -62,21 +62,27 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ## :checkered_flag: Starting
 
+1. Clone this project:
 ```bash
-# Clone this project
-$ git clone https://github.com/wlsonsouto/file-organizer
+git clone https://github.com/wlsonsouto/file-organizer
+```
 
-# Access
-$ cd file-organizer/FileOrganizer
+2. Access the project folder:
+```bash
+cd file-organizer/FileOrganizer
+```
 
-# Open Program.cs and update the paths below to match your local directories:
-private const string Source = @"C:\YOUR-PATH\Downloads";
-private const string Documents = @"C:\YOUR-PATH\Documents";
-private const string Pictures = @"C:\YOUR-PATH\Pictures";
-private const string Videos = @"C:\YOUR-PATH\Videos";
+3. Open `Configuration.cs` and update the paths below to match your local directories:
+```cs
+public const string Source = @"C:\YOUR-PATH\Downloads";
+public const string Documents = @"C:\YOUR-PATH\Documents";
+public const string Pictures = @"C:\YOUR-PATH\Pictures";
+public const string Videos = @"C:\YOUR-PATH\Videos";
+```
 
-# Run the project
-$ dotnet run
+4. Run the project:
+```bash
+dotnet run
 ```
 
 ## :memo: License
