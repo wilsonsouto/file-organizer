@@ -62,27 +62,21 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ## :checkered_flag: Starting
 
-1. Clone this project:
 ```bash
-git clone https://github.com/wlsonsouto/file-organizer
-```
+# Clone this project
+$ git clone https://github.com/wlsonsouto/file-organizer
 
-2. Access the project folder:
-```bash
-cd file-organizer/FileOrganizer
-```
+# Access the project folder
+$ cd file-organizer/FileOrganizer
 
-3. Open `Configuration.cs` and update the paths below to match your local directories:
-```cs
+# Open Configuration.cs and update the paths below to match your local directories
 public const string Source = @"C:\YOUR-PATH\Downloads";
 public const string Documents = @"C:\YOUR-PATH\Documents";
 public const string Pictures = @"C:\YOUR-PATH\Pictures";
 public const string Videos = @"C:\YOUR-PATH\Videos";
-```
 
-4. Run the project:
-```bash
-dotnet run
+# Run the project
+$ dotnet run
 ```
 
 ## :memo: License
