@@ -1,52 +1,53 @@
-﻿namespace FileOrganizer;
-
-public static class Program
+﻿namespace FileOrganizer
 {
-    public static void Main(string[] args)
+    public static class Program
     {
-        // Dictionary of extensions
-        var extensions = new Dictionary<string, string>
+        public static void Main(string[] args)
         {
-            { "rar", "rar" },
-            { "docx", "docx" },
-            { "jpg", "jpg" },
-            { "png", "png" },
-            { "ico", "ico" },
-            { "mp4", "mp4" },
-            { "avi", "avi" },
-            { "mk4", "mk4" }
-        };
-
-        foreach (var extension in extensions)
-            try
+            // Dictionary of extensions
+            var extensions = new Dictionary<string, string>
             {
-                var destFolder = "";
+                { "rar", "rar" },
+                { "docx", "docx" },
+                { "jpg", "jpg" },
+                { "png", "png" },
+                { "ico", "ico" },
+                { "mp4", "mp4" },
+                { "avi", "avi" },
+                { "mk4", "mk4" }
+            };
 
-                // Get all files from the source folder with the corresponding extension
-                var files = Directory.GetFiles(Configuration.Source, $"*.{extension.Key}");
-
-                foreach (var file in files)
+            foreach (var extension in extensions)
+                try
                 {
-                    // Determine the destination folder based on the file extension
-                    if (new[] { "rar", "docx" }.Contains(extension.Key))
-                        destFolder = Configuration.Documents;
+                    var destFolder = "";
 
-                    if (new[] { "jpg", "png", "ico" }.Contains(extension.Key))
-                        destFolder = Configuration.Pictures;
+                    // Get all files from the source folder with the corresponding extension
+                    var files = Directory.GetFiles(Configuration.Source, $"*.{extension.Key}");
 
-                    if (new[] { "mp4", "avi", "mk4" }.Contains(extension.Key))
-                        destFolder = Configuration.Videos;
+                    foreach (var file in files)
+                    {
+                        // Determine the destination folder based on the file extension
+                        if (new[] { "rar", "docx" }.Contains(extension.Key))
+                            destFolder = Configuration.Documents;
 
-                    // Move the file to the destination folder
-                    var destFile = Path.Combine(destFolder, Path.GetFileName(file));
-                    File.Move(file, destFile);
+                        if (new[] { "jpg", "png", "ico" }.Contains(extension.Key))
+                            destFolder = Configuration.Pictures;
 
-                    Console.WriteLine($"File: {Path.GetFileName(file)} moved to: {destFolder}");
+                        if (new[] { "mp4", "avi", "mk4" }.Contains(extension.Key))
+                            destFolder = Configuration.Videos;
+
+                        // Move the file to the destination folder
+                        var destFile = Path.Combine(destFolder, Path.GetFileName(file));
+                        File.Move(file, destFile);
+
+                        Console.WriteLine($"File: {Path.GetFileName(file)} moved to: {destFolder}");
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error moving files with {extension.Key}: {ex.Message}");
-            }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error moving files with {extension.Key}: {ex.Message}");
+                }
+        }
     }
 }
